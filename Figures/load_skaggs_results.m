@@ -1,5 +1,5 @@
 
-decoding_skaggs = '/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/Data&Analysis/Paper/Skaggs/';
+decoding_skaggs = '';
 
 for f = 1:length(data)
     for i = 1:length(data(f).sessionIDs)
