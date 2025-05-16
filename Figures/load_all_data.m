@@ -116,8 +116,8 @@ data(8).sessionIDs  = {'m5091-20200504-03',...
 
 
 
-load_sData_dirct = '/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/Data&Analysis/Paper/sData/';
-analysis_dirct = '/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/Data&Analysis/Paper/';
+load_sData_dirct = '';
+analysis_dirct = '';
 
 mData = struct();
 % Load all sessions
