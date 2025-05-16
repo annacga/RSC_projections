@@ -3,7 +3,7 @@
 
 This repository accompanies the publication:
 
-Gianatti M.*, Garvert A.*, Lenkey N., Ebbesen N., Hennestad E., Vervaeke K.
+Gianatti M.\*, Garvert A.\*, Lenkey N., Ebbesen N., Hennestad E., Vervaeke K.
 Multiple long-range projections convey position information to the agranular retrosplenial cortex
 Cell Reports, Volume 42, Issue 9, September 26, 2023
 (* indicates equal contribution)
@@ -43,7 +43,6 @@ sData_template.m
 - Axons not outperforming the baseline are considered **not tuned**; others are classified according to which variables they encode (position, speed, acceleration, or licking).  
 - Multiple tuning is assigned if no single model significantly outperforms others.  
 - Classification significance and chance levels are estimated through permutation testing.  
-- Detailed explanation available in the publication’s Methods section.
 
 ### 🧠 Bayesian Decoding
 - **Location:** `analysis/decoding/`  
@@ -53,11 +52,9 @@ sData_template.m
 - Decoding error quantified as mean distance between predicted and actual positions.  
 - Chance decoding error estimated through random shuffling of position labels.  
 
-
 ### ℹ️ Skaggs Information Score
 - **Location:** `analysis/skaggs/`  
-- Calculates the Skaggs spatial information score to quantify spatial coding based on calcium activity maps, adapted for ΔF/F signals using a scaling factor.  
-- See the Spatial Binning and Information Score section for details on calculation and normalization.
+- Calculates the Skaggs spatial information score (Skaggs et al., 1993) to quantify spatial coding based on calcium activity maps, adapted for ΔF/F signals using a scaling factor according to Climer et al., 2021.  
 
 
 
