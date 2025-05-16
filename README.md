@@ -44,7 +44,7 @@ load_skaggs_results()     % Required for Figure 3.
 
 helper.createRMaps        % Required for Figures 1, 2 & 3.
                           % Generates rate maps (heatmaps) for all cells.
-
+```
 ## 📄 Data Reference
 
 ### For a description of the variables used in the figure scripts, refer to:
