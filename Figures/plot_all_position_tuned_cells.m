@@ -1,0 +1,34 @@
+
+load_all_data()          % find explanation of sData structure in: sData_template.m
+load_LNP_results()       % if not available run analysis/cellClassification
+
+rmaps = struct();
+
+for k =1:length(data)
+    
+    rmaps(k,j).dff  = [];
+    rmaps(k,j).deconv  = [];
+
+    for j = 1:length(data(k).sessionIDs)
+        g = 1;
+        sData  = mData(k,j).sData;
+        signal_dff = sData.imdata.roiSignals(2).dff;
+        signal_deconv = sData.imdata.roiSignals(2).deconv;
+        
+          for f = 1:length(mData(areas(k),j).LNP_results)
+            if ~isempty(find(mData(areas(k),j).LNP_results(f).selected_model == 1)) && isempty(find(mData(areas(k),j).LNP_results(f).selected_model == 5))
+                rmaps(k,j).dff{g}            = helper.splitInTrialsPos(signal_dff, sData, f);
+                rmaps(k,j).deconv{g}        = smoothdata( helper.splitInTrialsPos(signal_deconv, sData, f), 2,'gaussian',8);
+                fig =figure();
+                subplot(2,1,1)
+                imagesc(rmaps(k,j).dff{g})
+                subplot(2,1,1)
+                imagesc(rmaps(k,j).deconv{g})
+                saves(fig,fullfile('/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/GraphicalAbstract/rois',data(k).area,data(k).sessionIDs{j},strcat(num2str(g),'.pdf'),'.pdf'))
+                g = g+1;
+            end
+          end
+    end
+end
+
+
