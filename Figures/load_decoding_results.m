@@ -1,5 +1,5 @@
 
-decoding_onlyPC_dirct = '/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/Data&Analysis/Paper/decoding/decodingOnlyPC/';
+decoding_onlyPC_dirct = '';
 
 for f = 1:length(data)
     for i = 1:length(data(f).sessionIDs)
@@ -8,7 +8,7 @@ for f = 1:length(data)
     end
 end
 
-decoding_dirct = '/Users/annachristinagarvert/UIO Physiology Dropbox Dropbox/Lab Data/Michele Gianatti/Data&Analysis/Paper/decoding/decodingVsNoCells/';
+decoding_dirct = '';
 
 for f = 1:length(data)
     for i = 1:length(data(f).sessionIDs)
