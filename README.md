@@ -23,17 +23,27 @@ Cell Reports, Volume 42, Issue 9, September 26, 2023
 
 - create_all_figures.m
 
-### To run separate figures run:
-- create_figure_1.m
-- create_figure_2.m
-- create_figure_3.m
-- 
-### but make sure to run the following scripts first in Figure/ directory if separate figures are run:
-load_all_data()          % find explanation of sData structure in: sData_template.m
-load_LNP_results()       % if not available run analysis/cellClassification/main_cell_classification.m
-load_decoding_results()  % if not available run analysis/decoding/decoding_main.m
-load_skaggs_results()    % if not available run analysis/skaggs/calculate_skaggs.m
-helper.createRMaps;      % this creates heatmaps for all cells
+### 🧩 To generate figures individually:
+You can run any of the following scripts in the `Figure/` directory:
+- `create_figure_1.m`
+- `create_figure_2.m`
+- `create_figure_3.m`
+
+⚠️ **Before running individual figure scripts, make sure to first run the following setup scripts in the same directory:**
+
+```matlab
+load_all_data()           % Loads the full sData structure. See 'sData_template.m' for details.
+load_LNP_results()        % Required for Figures 1, 2 & 3. 
+                          % If unavailable, run: analysis/cellClassification/main_cell_classification.m
+
+load_decoding_results()   % Required for Figures 1 & 3.
+                          % If unavailable, run: analysis/decoding/decoding_main.m
+
+load_skaggs_results()     % Required for Figure 3.
+                          % If unavailable, run: analysis/skaggs/calculate_skaggs.m
+
+helper.createRMaps        % Required for Figures 1, 2 & 3.
+                          % Generates rate maps (heatmaps) for all cells.
 
 ## 📄 Data Reference
 
